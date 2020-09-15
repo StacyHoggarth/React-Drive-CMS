@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/4203fba4-7672-42b0-a551-3099d539aa91/resourceGroups/StacyAndDellPOD/providers/Microsoft.Web/sites/StacyAndDellPOD",
+    "appService.deploySubpath": "."
+}
