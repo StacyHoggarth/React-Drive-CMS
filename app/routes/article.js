@@ -107,14 +107,6 @@ class Article extends Component {
             menuVisible && styles.mainNarrow
           )}
         >
-          <header
-            className=${css(styles.hero)}
-            role="banner"
-            style=${{
-              backgroundImage: `url(${activeArticle.image})`,
-            }}
-            id="article-header"
-          />
           <section
             className=${css(
               styles.content,
@@ -126,6 +118,15 @@ class Article extends Component {
             </h1>
             <p className="{css(styles.p)}">
               ${activeArticle.subtitle}
+            </p>
+            <p>
+              <div style="text-align: center;">
+                <img
+                  src=${activeArticle.image}
+                  style="max-width: 100%; height: auto;"
+                  alt="FYI, image alt text is required"
+                />
+              </div>
             </p>
             <div
               className=${css(styles.text)}
