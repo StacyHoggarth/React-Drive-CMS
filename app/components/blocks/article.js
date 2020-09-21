@@ -1,5 +1,5 @@
-import { html } from '../../../deps/react.js'
-import { Link } from '../../../deps/react-router-dom.js'
+import { html } from "../../../deps/react.js";
+import { Link } from "../../../deps/react-router-dom.js";
 
 let Article = ({ article, category }) => html`
     <style>
@@ -77,15 +77,26 @@ let Article = ({ article, category }) => html`
                 ${article.title}
             <//>
         </h2>
+         <p>
+              <div style="text-align: center;">
+                <img
+                  src=${article.image}
+                  style="max-width: 100%; height: auto;"
+                  alt="FYI, image alt text is required"
+                />
+              </div>
+            </p>
         <p class="description">
             ${article.subtitle}
         </p>
         <p class="meta">
             <span
-                title=${'Comments for ' + article.title}
-                data-disqus-url=${window.location.protocol +
-                window.location.hostname +
-                article.uri}
+                title=${"Comments for " + article.title}
+                data-disqus-url=${
+                  window.location.protocol +
+                  window.location.hostname +
+                  article.uri
+                }
                 data-disqus-identifier=${article.id}
                 class="disqus-comment-count"
             />
@@ -99,7 +110,6 @@ let Article = ({ article, category }) => html`
             <//>
         </p>
     </article>
-`
+`;
 
-export default Article
-
+export default Article;

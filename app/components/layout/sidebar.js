@@ -21,6 +21,7 @@ class Sidebar extends PureComponent {
             <p className=${css(styles.p)}>${subtitle}</p>
             <p className=${css(styles.p)}>${description}</p>
           </div>
+          <!-- 
           <div className=${css(styles.links, showLinks && styles.showLinks)}>
             <a
               className=${css(styles.button)}
@@ -30,6 +31,7 @@ class Sidebar extends PureComponent {
               Original posts on Drive
             </a>
           </div>
+          -->
         </div>
       </aside>
     `;
@@ -59,14 +61,14 @@ let styles = StyleSheet.create({
       height: "100vh",
       backgroundColor: "#f5f5f5",
       position: "fixed",
-      width: "40%",
+      width: "20%",
       left: 0,
     },
     "@media (min-width: 1200px)": {
       height: "100vh",
       backgroundColor: "#f5f5f5",
       position: "fixed",
-      width: "40%",
+      width: "20%",
       left: 0,
     },
     overflowX: "hidden",
