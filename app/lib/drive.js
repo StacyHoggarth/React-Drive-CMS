@@ -166,12 +166,16 @@ class Drive extends Api {
     var daySuffix = "th";
     switch (day) {
       case 1:
+      case 21:
+      case 31:
         daySuffix = "st";
         break;
       case 2:
+      case 22:
         daySuffix = "nd";
         break;
       case 3:
+      case 23:
         daySuffix = "rd";
         break;
     }
