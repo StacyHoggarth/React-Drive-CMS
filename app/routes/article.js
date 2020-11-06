@@ -11,9 +11,6 @@ import * as articleActions from "../modules/article/actionCreators.js";
 
 import Menu from "../components/layout/menu.js";
 import blocks from "../styles/blocks.js";
-import Footer from "../components/layout/footer.js";
-import DisqusThread from "../components/disqus/disqusThread.js";
-
 class Article extends Component {
   static readyOnActions(dispatch, activeArticleId) {
     return Promise.all([
@@ -70,7 +67,7 @@ class Article extends Component {
       category = { title: "", uri: "/" };
     if (
       typeof articles[activeArticleId] !== "undefined" &&
-      typeof texts[activeArticleId] !== "undefined" &&
+      //typeof texts[activeArticleId] !== "undefined" &&
       typeof categories[articles[activeArticleId].categoryId] !== "undefined"
     ) {
       activeArticle = articles[activeArticleId];
@@ -107,41 +104,18 @@ class Article extends Component {
             menuVisible && styles.mainNarrow
           )}
         >
-          <section
-            className=${css(
-              styles.content,
-              menuVisible && styles.contentNarrow
-            )}
-          >
-            <h1 id="article-title" className=${css(styles.title)}>
-              ${activeArticle.title}
-            </h1>
-            <p className="{css(styles.p)}">
-              ${activeArticle.subtitle}
-            </p>
-            <p>
-              <div style="text-align: center;">
-                <img
-                  src=${activeArticle.image}
-                  style="max-width: 100%; height: auto;"
-                  alt="FYI, image alt text is required"
-                />
-              </div>
-            </p>
-            <div
-              className=${css(styles.text)}
-              dangerouslySetInnerHTML=${{ __html: activeText }}
-            />
-            <${DisqusThread}
-              id=${activeArticle.id}
-              title=${activeArticle.title}
-            />
-          </section>
-          <${Footer}
-            article=${activeArticle}
-            articles=${articles}
-            category=${category}
-            menuVisible=${menuVisible}
+          <div
+            className="img_cont"
+            style=${{
+              backgroundImage: `url(${activeArticle.image})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              bottom: 0,
+              right: 0,
+              left: 0,
+              top: 0,
+              position: "fixed",
+            }}
           />
         </main>
       </div>
