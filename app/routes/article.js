@@ -109,7 +109,8 @@ class Article extends Component {
             style=${{
               backgroundImage: `url(${activeArticle.image})`,
               backgroundPosition: "center",
-              backgroundSize: "cover",
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
               bottom: 0,
               right: 0,
               left: 0,
