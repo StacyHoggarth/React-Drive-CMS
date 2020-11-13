@@ -1,9 +1,7 @@
 import React from "../../deps/react.js";
 
 import Article from "./article.js";
-//import Pod from "./pod.js";
 import Category from "./category.js";
-
 import About from "./about.js";
 import Contact from "./contact.js";
 import Home from "./home.js";
